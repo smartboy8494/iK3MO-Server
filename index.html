@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wick Studio - Discord Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="Images/logo.png" alt="Wick Studio Logo" class="logo-image">
+                </div>
+            </div>
+            <h1 class="main-title">مرحباً بك في iK3MO</h1>
+            <p class="subtitle"> تعال وخلّك جزء من ذكرياتنا.
+كل لحظة هنا لها معنى، وكل شخص له مكان </p>
+        </header>
+
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li><a href="#rules" class="nav-link">القوانين</a></li>
+                <li><a href="#ratings" class="nav-link">التقييمات</a></li>
+                <li><a href="#join" class="nav-link">الانضمام</a></li>
+            </ul>
+        </nav>
+
+
+        <section id="rules" class="section">
+            <div class="section-content">
+                <h2>قوانين السيرفر</h2>
+                <div class="rules-container">
+                    <div class="rules-loading">جاري تحميل القوانين...</div>
+                    <div id="rules-content" class="rules-content"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ratings" class="section">
+            <div class="section-content">
+                <h2>تقييم السيرفر</h2>
+                
+                <div class="rating-form">
+                    <h3>قيم السيرفر</h3>
+                    <form id="ratingForm">
+                        <div class="form-group">
+                            <label for="userName">الاسم:</label>
+                            <input type="text" id="userName" name="userName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="rating">التقييم:</label>
+                            <div class="star-rating">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5">★</label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4">★</label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3">★</label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2">★</label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1">★</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="comment">تعليق (اختياري):</label>
+                            <textarea id="comment" name="comment" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">إرسال التقييم</button>
+                    </form>
+                </div>
+
+                <div class="ratings-display">
+                    <h3>التقييمات الحالية</h3>
+                    <div class="average-rating">
+                        <span class="average-text">متوسط التقييم:</span>
+                        <span id="averageRating" class="average-number">0</span>
+                        <span class="average-stars" id="averageStars"></span>
+                    </div>
+                    <div id="ratingsList" class="ratings-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="section">
+            <div class="section-content">
+                <h2>انضم إلينا الآن!</h2>
+                <p>انضم إلى مجتمع Wick Studio وكن جزءاً من عائلة المبدعين</p>
+                
+                <div class="join-buttons">
+                    <a href="https://discord.gg/puQVBUPqyM" target="_blank" class="discord-btn">
+                        <span class="discord-icon">💬</span>
+                        انضم إلى Discord
+                    </a>
+                    
+                    <button id="copyInviteBtn" class="copy-btn">
+                        <span class="copy-icon">📋</span>
+                        نسخ رابط الدعوة
+                    </button>
+                </div>
+                
+                <div class="server-info">
+                    <div class="info-card">
+                        <h4>رابط الدعوة</h4>
+                        <p id="inviteLink">https://discord.gg/puQVBUPqyM</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>عدد الأعضاء</h4>
+                        <p id="memberCount">+1000 عضو نشط</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>تاريخ الإنشاء</h4>
+                        <p>2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Wick Studio. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="https://discord.gg/puQVBUPqyM" target="_blank" class="social-link">Discord</a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
